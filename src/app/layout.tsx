@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
+import { Providers } from "@/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +31,41 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script 
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                // Retrieve the theme preference from local storage
+                try {
+                  const themeMode = localStorage.getItem('theme');
+                  const uiTheme = localStorage.getItem('ui-theme');
+                  
+                  // Apply the theme class to the html element
+                  if (uiTheme) {
+                    document.documentElement.classList.add('theme-' + uiTheme);
+                  } else {
+                    document.documentElement.classList.add('theme-jibbit');
+                  }
+                  
+                  // Set the color mode
+                  if (themeMode === 'dark' || 
+                      (!themeMode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                  }
+                } catch (e) {
+                  // Do nothing if localStorage is not available
+                }
+              })()
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${redHatDisplay.variable} antialiased`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

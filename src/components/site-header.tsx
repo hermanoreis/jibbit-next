@@ -2,6 +2,7 @@ import { Bell } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
+import { ThemeSwitcher } from "@/components/theme-switcher"
 
 export function SiteHeader() {
   return (
@@ -25,6 +26,7 @@ export function SiteHeader() {
               Notificações
             </a>
           </Button>
+          <ThemeSwitcher />
         </div>
       </div>
     </header>
