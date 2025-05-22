@@ -30,8 +30,8 @@ export function Overview() {
         </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <Card>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-full overflow-x-hidden">
+        <Card className="min-w-0 max-w-full">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex items-center gap-2">
               <ClockIcon className="h-5 w-5 text-primary" />
@@ -44,7 +44,7 @@ export function Overview() {
             <Progress value={33} className="mt-2 h-2" />
           </CardContent>
         </Card>
-        <Card>
+        <Card className="min-w-0 max-w-full">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex items-center gap-2">
               <CheckCircleIcon className="h-5 w-5 text-primary" />
@@ -57,7 +57,7 @@ export function Overview() {
             <Progress value={68} className="mt-2 h-2" />
           </CardContent>
         </Card>
-        <Card>
+        <Card className="min-w-0 max-w-full">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex items-center gap-2">
               <PenLineIcon className="h-5 w-5 text-primary" />

@@ -2,6 +2,8 @@
 
 Jibbit is a foundation software architecture for Jovens Gênios products. Built on [Next.js](https://nextjs.org), it combines shadcn UI components with tweakcn styling to create highly adaptable platforms that can be customized for different clients and products.
 
+**Live Demo**: [https://jibbit-next.vercel.app/](https://jibbit-next.vercel.app/)
+
 ## Key Features
 
 - **Customizable Design**: Each client can have their solution tailored with custom color styles, logos, and specific functionality

@@ -14,6 +14,7 @@ import {
   IconReport,
   IconSearch,
   IconSettings,
+  IconSchool,
   IconMessageChatbot,
 } from "@tabler/icons-react"
 
@@ -53,6 +54,11 @@ const data = {
       title: "Cursos",
       url: "#",
       icon: IconBook,
+    },
+    {
+      title: "Minha Escola",
+      url: "#",
+      icon: IconSchool,
     },
     {
       title: "Meu Desempenho",
