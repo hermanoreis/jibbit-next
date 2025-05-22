@@ -56,6 +56,18 @@ export function ThemeSwitcher() {
         >
           NeoBrutalism
         </DropdownMenuItem>
+        <DropdownMenuItem 
+          onClick={() => setTheme("bubblegum")}
+          className={theme === "bubblegum" ? "bg-accent text-accent-foreground" : ""}
+        >
+          Bubblegum
+        </DropdownMenuItem>
+        <DropdownMenuItem 
+          onClick={() => setTheme("vintagepaper")}
+          className={theme === "vintagepaper" ? "bg-accent text-accent-foreground" : ""}
+        >
+          Vintage Paper
+        </DropdownMenuItem>
         
         <DropdownMenuSeparator />
         

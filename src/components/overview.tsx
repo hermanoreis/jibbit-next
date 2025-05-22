@@ -30,7 +30,7 @@ export function Overview() {
         </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-full overflow-x-hidden">
+      <div className="grid gap-6 pb-4 md:grid-cols-2 lg:grid-cols-3 max-w-full overflow-x-hidden">
         <Card className="min-w-0 max-w-full">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex items-center gap-2">
