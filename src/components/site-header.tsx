@@ -15,15 +15,15 @@ export function SiteHeader() {
         />
         <h1 className="text-base font-medium">Página Inicial</h1>
         <div className="ml-auto flex items-center gap-2">
-          <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
+          <Button variant="ghost" asChild size="sm" className="flex">
             <a
               href="#"
               rel="noopener noreferrer"
               target="_blank"
               className="dark:text-foreground"
             >
-              <Bell className="mr-2" />
-              Notificações
+              <Bell className="mr-2 sm:mr-2" />
+              <span className="hidden sm:inline">Notificações</span>
             </a>
           </Button>
           <ThemeSwitcher />
