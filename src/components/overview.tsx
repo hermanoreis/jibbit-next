@@ -5,7 +5,7 @@ import { Progress } from "@/components/ui/progress"
 import { MeuCronograma } from "@/components/meu-cronograma"
 import { RedacaoDaSemana } from "@/components/redacao-da-semana"
 import { SimuladosTri } from "@/components/simulados-tri"
-import { DesempenhoGeral } from "@/components/desempenho-geral"
+import { TarefasELembretes } from "@/components/ui/tasks-reminders"
 import { DiarioDeBordo } from "@/components/diario-de-bordo"
 
 export function Overview() {
@@ -28,6 +28,11 @@ export function Overview() {
             Relatórios
           </Button>
         </div>
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-2">
+        <MeuCronograma />
+        <DiarioDeBordo />
       </div>
 
       <div className="grid gap-6 pb-4 md:grid-cols-2 lg:grid-cols-3 max-w-full overflow-x-hidden">
@@ -72,16 +77,11 @@ export function Overview() {
         </Card>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
-        <MeuCronograma />
-        <RedacaoDaSemana />
-      </div>
-
       <SimuladosTri />
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <DesempenhoGeral />
-        <DiarioDeBordo />
+        <TarefasELembretes />
+        <RedacaoDaSemana />
       </div>
     </div>
   )

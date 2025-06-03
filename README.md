@@ -14,16 +14,17 @@ Jibbit is a foundation software architecture for Jovens Gênios products. Built 
 
 ## Getting Started
 
-First, run the development server:
+This project uses [PNPM](https://pnpm.io/) as the package manager. First, make sure you have PNPM installed:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+npm install -g pnpm
+```
+
+Then install dependencies and run the development server:
+
+```bash
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
