@@ -20,7 +20,7 @@ const entries = [
   },
 ]
 
-export function DiarioDeBordo() {
+export function Logbook() {
   return (
     <Card className="col-span-1">
       <CardHeader className="pb-2">
@@ -54,4 +54,4 @@ export function DiarioDeBordo() {
       </CardContent>
     </Card>
   )
-}
+} 

@@ -31,7 +31,7 @@ const tasks = [
   },
 ]
 
-export function MeuCronograma() {
+export function MySchedule() {
   const [currentDay, setCurrentDay] = useState(9)
 
   return (
@@ -103,4 +103,4 @@ export function MeuCronograma() {
       </CardContent>
     </Card>
   )
-}
+} 

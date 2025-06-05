@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { BarChart4Icon, TrendingUpIcon } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
-export function DesempenhoGeral() {
+export function GeneralPerformance() {
   return (
     <Card className="col-span-1">
       <CardHeader className="pb-2">
@@ -74,4 +74,4 @@ export function DesempenhoGeral() {
       </CardContent>
     </Card>
   )
-}
+} 

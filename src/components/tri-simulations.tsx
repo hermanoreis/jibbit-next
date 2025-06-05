@@ -30,7 +30,7 @@ const simulados = [
   },
 ]
 
-export function SimuladosTri() {
+export function TRISimulations() {
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -97,4 +97,4 @@ export function SimuladosTri() {
       </CardContent>
     </Card>
   )
-}
+} 

@@ -131,6 +131,7 @@ function SidebarProvider({
       <TooltipProvider delayDuration={0}>
         <div
           data-slot="sidebar-wrapper"
+          data-desktop-sidebar-state={state}
           style={
             {
               "--sidebar-width": SIDEBAR_WIDTH,

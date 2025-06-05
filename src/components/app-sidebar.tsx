@@ -17,6 +17,7 @@ import {
   IconSchool,
   IconMessageChatbot,
 } from "@tabler/icons-react"
+import { ListChecksIcon } from "lucide-react"
 
 import { LogoIcon } from "@/components/icons/logo-icon"
 import { NavDocuments } from "@/components/nav-documents"
@@ -31,6 +32,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarTrigger,
 } from "@/components/ui/sidebar"
 
 const data = {
@@ -56,9 +58,9 @@ const data = {
       icon: IconBook,
     },
     {
-      title: "Minha Escola",
+      title: "Tarefas e Lembretes",
       url: "#",
-      icon: IconSchool,
+      icon: ListChecksIcon,
     },
     {
       title: "Meu Desempenho",
@@ -116,19 +118,9 @@ const data = {
   ],
   navSecondary: [
     {
-      title: "Configurações",
-      url: "#",
-      icon: IconSettings,
-    },
-    {
       title: "Ajuda",
       url: "#",
       icon: IconHelp,
-    },
-    {
-      title: "Pesquisa",
-      url: "#",
-      icon: IconSearch,
     },
   ],
   documents: [
@@ -154,7 +146,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader className="py-4">
-        <SidebarMenu>
+        <SidebarMenu className="flex flex-row w-full items-center justify-between">
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
@@ -165,6 +157,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 <span className="text-xl font-black font-redhat">Jibbit</span>
               </a>
             </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem className="hidden md:block">
+            <SidebarTrigger />
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>

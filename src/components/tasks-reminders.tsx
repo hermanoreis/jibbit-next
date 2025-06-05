@@ -32,7 +32,7 @@ const initialTasks: Task[] = [
   { id: "4", text: "Ler o artigo sobre atualidades", completed: false, dueDate: "2025-06-12" },
 ]
 
-export function TarefasELembretes() {
+export function TasksAndReminders() {
   const [tasks, setTasks] = useState<Task[]>(initialTasks)
   const [newTaskText, setNewTaskText] = useState("")
   const [newTaskDueDate, setNewTaskDueDate] = useState("")
@@ -51,15 +51,15 @@ export function TarefasELembretes() {
   }
 
   const toggleTaskCompletion = (taskId: string) => {
-    setTasks(tasks.map((task) => (task.id === taskId ? { ...task, completed: !task.completed } : task)))
+    setTasks(tasks.map((task: Task) => (task.id === taskId ? { ...task, completed: !task.completed } : task)))
   }
 
   const deleteTask = (taskId: string) => {
-    setTasks(tasks.filter((task) => task.id !== taskId))
+    setTasks(tasks.filter((task: Task) => task.id !== taskId))
   }
 
-  const pendingTasks = tasks.filter((task) => !task.completed)
-  const completedTasks = tasks.filter((task) => task.completed)
+  const pendingTasks = tasks.filter((task: Task) => !task.completed)
+  const completedTasks = tasks.filter((task: Task) => task.completed)
 
   return (
     <Card className="col-span-1 lg:col-span-1 flex flex-col">
@@ -83,14 +83,14 @@ export function TarefasELembretes() {
                 <Input
                   placeholder="Descrição da tarefa..."
                   value={newTaskText}
-                  onChange={(e) => setNewTaskText(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTaskText(e.target.value)}
                   className="col-span-3"
                 />
                 <Input
                   type="date"
                   placeholder="Data de conclusão (opcional)"
                   value={newTaskDueDate}
-                  onChange={(e) => setNewTaskDueDate(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTaskDueDate(e.target.value)}
                   className="col-span-3"
                 />
               </div>
@@ -114,7 +114,7 @@ export function TarefasELembretes() {
           )}
           {pendingTasks.length > 0 && <h4 className="text-sm font-medium mb-2 text-muted-foreground">Pendentes</h4>}
           <ul className="space-y-2">
-            {pendingTasks.map((task) => (
+            {pendingTasks.map((task: Task) => (
               <li key={task.id} className="flex items-center gap-3 p-2 rounded-md hover:bg-gray-50 group">
                 <Checkbox
                   id={`task-${task.id}`}
@@ -145,7 +145,7 @@ export function TarefasELembretes() {
           {completedTasks.length > 0 && pendingTasks.length > 0 && <hr className="my-4" />}
           {completedTasks.length > 0 && <h4 className="text-sm font-medium my-2 text-muted-foreground">Concluídas</h4>}
           <ul className="space-y-2">
-            {completedTasks.map((task) => (
+            {completedTasks.map((task: Task) => (
               <li key={task.id} className="flex items-center gap-3 p-2 rounded-md hover:bg-gray-50 group">
                 <Checkbox
                   id={`task-${task.id}`}
@@ -180,4 +180,4 @@ export function TarefasELembretes() {
       </CardContent>
     </Card>
   )
-}
+} 

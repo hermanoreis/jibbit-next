@@ -2,11 +2,11 @@ import { CalendarIcon, CheckCircleIcon, ClockIcon, PenLineIcon, TrendingUpIcon }
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { MeuCronograma } from "@/components/meu-cronograma"
-import { RedacaoDaSemana } from "@/components/redacao-da-semana"
-import { SimuladosTri } from "@/components/simulados-tri"
-import { TarefasELembretes } from "@/components/ui/tasks-reminders"
-import { DiarioDeBordo } from "@/components/diario-de-bordo"
+import { MySchedule } from "@/components/my-schedule"
+import { WeeklyEssay } from "@/components/weekly-essay"
+import { TRISimulations } from "@/components/tri-simulations"
+import { TasksAndReminders } from "@/components/tasks-reminders"
+import { Logbook } from "@/components/logbook"
 
 export function Overview() {
   return (
@@ -19,20 +19,12 @@ export function Overview() {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="outline" className="hidden md:flex gap-2">
-            <CalendarIcon className="h-4 w-4" />
-            Junho 2025
-          </Button>
-          <Button className="hidden md:flex bg-primary hover:bg-primary/90 gap-2">
-            <TrendingUpIcon className="h-4 w-4" />
-            Relatórios
-          </Button>
         </div>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <MeuCronograma />
-        <DiarioDeBordo />
+        <MySchedule />
+        <TasksAndReminders />
       </div>
 
       <div className="grid gap-6 pb-4 md:grid-cols-2 lg:grid-cols-3 max-w-full overflow-x-hidden">
@@ -77,11 +69,11 @@ export function Overview() {
         </Card>
       </div>
 
-      <SimuladosTri />
+      <TRISimulations />
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <TarefasELembretes />
-        <RedacaoDaSemana />
+        <Logbook />
+        <WeeklyEssay />
       </div>
     </div>
   )

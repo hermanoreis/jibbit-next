@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
-export function RedacaoDaSemana() {
+export function WeeklyEssay() {
   return (
     <Card className="col-span-1">
       <CardHeader className="pb-2">
@@ -59,4 +59,4 @@ export function RedacaoDaSemana() {
       </CardContent>
     </Card>
   )
-}
+} 
