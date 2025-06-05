@@ -1,6 +1,5 @@
-import { CheckCircleIcon, ClockIcon, PenLineIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { CheckCircleIcon } from "lucide-react"
+import { Card } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { MySchedule } from "@/components/my-schedule"
 import { WeeklyEssay } from "@/components/weekly-essay"
