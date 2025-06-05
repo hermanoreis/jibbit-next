@@ -14,8 +14,8 @@ export function Overview() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Olá, Hermano! 👋</h2>
-          <p className="text-muted-foreground">
-            Seu plano de estudos: <span className="font-medium">ENEM / Vestibulares</span>
+          <p className="text-muted-foreground" id="wisdom-of-the-day">
+            Lembre-se: a jornada do conhecimento é longa, mas cada passo vale a pena!
           </p>
         </div>
         <div className="flex items-center gap-2">

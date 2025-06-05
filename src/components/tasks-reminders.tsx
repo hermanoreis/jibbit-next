@@ -107,8 +107,8 @@ export function TasksAndReminders() {
         </div>
         <CardDescription>Suas tarefas pendentes e lembretes importantes.</CardDescription>
       </CardHeader>
-      <CardContent className="flex-1 flex flex-col overflow-hidden p-0">
-        <div className="flex-1 px-6 py-4 overflow-y-auto">
+      <CardContent className="flex-1 flex flex-col overflow-hidden">
+        <div className="flex-1 overflow-y-auto">
           {pendingTasks.length === 0 && completedTasks.length === 0 && (
             <p className="text-sm text-muted-foreground text-center py-4">Nenhuma tarefa ou lembrete ainda.</p>
           )}
@@ -172,7 +172,7 @@ export function TasksAndReminders() {
             ))}
           </ul>
         </div>
-        <div className="border-t p-4">
+        <div className="mt-6 border-t pt-4">
           <Button variant="outline" className="w-full" asChild>
             <Link href="/tarefas">Ver todas as tarefas</Link>
           </Button>

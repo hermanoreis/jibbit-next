@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon, PencilIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -100,7 +101,12 @@ export function MySchedule() {
             </div>
           ))}
         </div>
+        <div className="mt-6 border-t pt-4">
+          <Button variant="outline" className="w-full" asChild>
+            <Link href="/cronograma">Ver cronograma completo</Link>
+          </Button>
+        </div>
       </CardContent>
     </Card>
   )
-} 
+}
