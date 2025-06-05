@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
-const simulados = [
+const practiceTests = [
   {
     title: "Linguagens, Códigos e suas Tecnologias",
     status: "iniciado",
@@ -30,32 +30,32 @@ const simulados = [
   },
 ]
 
-export function TRISimulations() {
+export function PracticeTests() {
   return (
     <Card>
       <CardHeader className="pb-2">
         <CardTitle className="text-xl flex items-center gap-2">
           <ActivitySquareIcon className="h-5 w-5 text-primary" />
-          Simulados TRI
+          Practice Tests
         </CardTitle>
         <CardDescription>
-          Faça simulados exclusivos com o método de avaliação TRI toda semana em cada área de conhecimento.
+          Run Practice Tests to better prepare for the official exams.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {simulados.map((simulado, i) => (
+          {practiceTests.map((practiceTest, i) => (
             <Card key={i} className="overflow-hidden">
               <CardContent className="p-0">
                 <div className="p-4">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-medium text-sm">{simulado.title}</h3>
-                    {simulado.status === "iniciado" && (
+                    <h3 className="font-medium text-sm">{practiceTest.title}</h3>
+                    {practiceTest.status === "iniciado" && (
                       <Badge variant="outline" className="bg-info/20 text-info hover:bg-info/20 border-info/30">
                         Iniciado
                       </Badge>
                     )}
-                    {simulado.status === "feito" && (
+                    {practiceTest.status === "feito" && (
                       <Badge
                         variant="outline"
                         className="bg-success/20 text-success hover:bg-success/20 border-success/30"
@@ -63,7 +63,7 @@ export function TRISimulations() {
                         Feito
                       </Badge>
                     )}
-                    {simulado.status === "disponivel" && (
+                    {practiceTest.status === "disponivel" && (
                       <Badge
                         variant="outline"
                         className="bg-secondary/20 text-secondary hover:bg-secondary/20 border-secondary/30"
@@ -76,18 +76,18 @@ export function TRISimulations() {
                   <div className="flex items-center mb-3 text-sm text-muted-foreground">
                     <BookIcon className="h-4 w-4 mr-1" />
                     <span>
-                      Questões: {simulado.completed} / {simulado.questions}
+                      Questões: {practiceTest.completed} / {practiceTest.questions}
                     </span>
                   </div>
 
                   <Button
                     className="w-full text-sm h-9"
-                    variant={simulado.status === "feito" ? "outline" : "default"}
-                    disabled={simulado.status === "feito"}
+                    variant={practiceTest.status === "feito" ? "outline" : "default"}
+                    disabled={practiceTest.status === "feito"}
                   >
-                    {simulado.status === "iniciado" && "Continuar"}
-                    {simulado.status === "feito" && "Revisar"}
-                    {simulado.status === "disponivel" && "Iniciar"}
+                    {practiceTest.status === "iniciado" && "Continuar"}
+                    {practiceTest.status === "feito" && "Revisar"}
+                    {practiceTest.status === "disponivel" && "Iniciar"}
                   </Button>
                 </div>
               </CardContent>

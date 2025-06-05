@@ -17,7 +17,7 @@ import {
 import { ListChecksIcon } from "lucide-react"
 
 import { LogoIcon } from "@/components/icons/logo-icon"
-import { NavDocuments } from "@/components/nav-documents"
+import { NavTools } from "@/components/nav-tools"
 import { NavMain } from "@/components/nav-main"
 import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/nav-user"
@@ -63,6 +63,11 @@ const data = {
       title: "Meu Desempenho",
       url: "#",
       icon: IconChartDots3,
+    },
+    {
+      title: "Tutor Jibbit",
+      url: "#",
+      icon: IconMessageChatbot,
     },
   ],
   navClouds: [
@@ -122,11 +127,6 @@ const data = {
   ],
   documents: [
     {
-      name: "Tutor Jibbit",
-      url: "#",
-      icon: IconMessageChatbot,
-    },
-    {
       name: "Simulados",
       url: "#",
       icon: IconReport,
@@ -162,7 +162,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
+        <NavTools items={data.documents} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>

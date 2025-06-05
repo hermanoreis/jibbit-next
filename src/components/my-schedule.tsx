@@ -79,7 +79,7 @@ export function MySchedule() {
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <h3 className="font-medium">Tarefas do dia {currentDay}</h3>
+            <h3 className="font-medium">Tópicos do dia {currentDay}</h3>
             <span className="text-sm text-muted-foreground">0 / 4</span>
           </div>
           <p className="text-sm text-muted-foreground">

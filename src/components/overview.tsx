@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { MySchedule } from "@/components/my-schedule"
 import { WeeklyEssay } from "@/components/weekly-essay"
-import { TRISimulations } from "@/components/tri-simulations"
+import { PracticeTests } from "@/components/practice-tests"
 import { TasksAndReminders } from "@/components/tasks-reminders"
 import { Logbook } from "@/components/logbook"
 
@@ -68,7 +68,7 @@ export function Overview() {
         </Card>
       </div>
 
-      <TRISimulations />
+      <PracticeTests />
 
       <div className="grid gap-6 lg:grid-cols-2">
         <Logbook />
