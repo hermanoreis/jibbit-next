@@ -2,8 +2,7 @@ import { CheckCircleIcon } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { MySchedule } from "@/components/my-schedule"
-import { WeeklyEssay } from "@/components/weekly-essay"
-import { PracticeTests } from "@/components/practice-tests"
+import { GeneralPerformance } from "@/components/general-performance"
 import { TasksAndReminders } from "@/components/tasks-reminders"
 import { Logbook } from "@/components/logbook"
 
@@ -39,11 +38,9 @@ export function Overview() {
         <TasksAndReminders />
       </div>
 
-      <PracticeTests />
-
       <div className="grid gap-6 lg:grid-cols-2">
         <Logbook />
-        <WeeklyEssay />
+        <GeneralPerformance />
       </div>
     </div>
   )

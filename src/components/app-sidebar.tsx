@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import {
   IconChartDots3,
   IconBook,
@@ -41,7 +42,7 @@ const data = {
   navMain: [
     {
       title: "Página Inicial",
-      url: "#",
+      url: "/",
       icon: IconHome,
     },
     {
@@ -128,7 +129,7 @@ const data = {
   documents: [
     {
       name: "Simulados",
-      url: "#",
+      url: "/practice-tests",
       icon: IconReport,
     },
     {
@@ -149,10 +150,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-2.5"
             >
-              <a href="#">
+              <Link href="/">
                 <LogoIcon className="h-[96px] w-auto !min-h-[96px]" />
                 <span className="text-xl font-black font-redhat">Jibbit</span>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem className="hidden md:block">
