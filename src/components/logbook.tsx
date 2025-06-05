@@ -24,11 +24,13 @@ export function Logbook() {
   return (
     <Card className="col-span-1">
       <CardHeader className="pb-2">
-        <CardTitle className="text-xl flex items-center gap-2">
-          <BookOpenIcon className="h-5 w-5 text-primary" />
-          Diário de Bordo
-        </CardTitle>
-        <CardDescription>Anotações sobre seu progresso nos estudos</CardDescription>
+        <div>
+          <CardTitle className="text-xl flex items-center gap-2">
+            <BookOpenIcon className="h-5 w-5 text-primary" />
+            Diário de Bordo
+          </CardTitle>
+          <CardDescription>Anotações sobre seu progresso nos estudos</CardDescription>
+        </div>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">

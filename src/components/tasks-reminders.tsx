@@ -64,15 +64,20 @@ export function TasksAndReminders() {
   return (
     <Card className="col-span-1 lg:col-span-1 flex flex-col">
       <CardHeader className="pb-2">
-        <div className="flex items-center justify-between">
-          <CardTitle className="text-xl flex items-center gap-2">
-            <ListChecksIcon className="h-5 w-5 text-primary" />
-            Tarefas e Lembretes
-          </CardTitle>
+        <div className="flex items-start justify-between">
+          <div>
+            <CardTitle className="text-xl flex items-center gap-2">
+              <ListChecksIcon className="h-5 w-5 text-primary" />
+              Tarefas e Lembretes
+            </CardTitle>
+            <CardDescription className="mt-1.5">Suas tarefas pendentes e lembretes importantes.</CardDescription>
+          </div>
           <Dialog>
-            <DialogTrigger className="text-primary hover:text-primary/80 inline-flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium transition-colors hover:bg-accent">
-              <PlusIcon className="h-4 w-4" />
-              Nova
+            <DialogTrigger asChild>
+              <Button variant="outline" size="sm" className="h-8 gap-2">
+                <PlusIcon className="h-3.5 w-3.5" />
+                <span>Nova</span>
+              </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
@@ -105,7 +110,6 @@ export function TasksAndReminders() {
             </DialogContent>
           </Dialog>
         </div>
-        <CardDescription>Suas tarefas pendentes e lembretes importantes.</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 flex flex-col overflow-hidden">
         <div className="flex-1 overflow-y-auto">

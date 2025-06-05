@@ -34,13 +34,15 @@ export function PracticeTests() {
   return (
     <Card>
       <CardHeader className="pb-2">
-        <CardTitle className="text-xl flex items-center gap-2">
-          <ActivitySquareIcon className="h-5 w-5 text-primary" />
-          Practice Tests
-        </CardTitle>
-        <CardDescription>
-          Run Practice Tests to better prepare for the official exams.
-        </CardDescription>
+        <div>
+          <CardTitle className="text-xl flex items-center gap-2">
+            <ActivitySquareIcon className="h-5 w-5 text-primary" />
+            Simulados
+          </CardTitle>
+          <CardDescription>
+            Faça simulados para se preparar melhor para as provas oficiais.
+          </CardDescription>
+        </div>
       </CardHeader>
       <CardContent>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

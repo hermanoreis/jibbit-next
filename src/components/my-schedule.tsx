@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { IconCalendarWeek } from "@tabler/icons-react"
 import { CalendarIcon, ChevronLeftIcon, ChevronRightIcon, PencilIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -37,18 +38,20 @@ export function MySchedule() {
 
   return (
     <Card className="col-span-1">
-      <CardHeader className="flex flex-row items-center justify-between pb-2">
-        <div className="space-y-1">
-          <CardTitle className="text-xl flex items-center gap-2">
-            <CalendarIcon className="h-5 w-5 text-primary" />
-            Meu cronograma
-          </CardTitle>
-          <CardDescription>Junho 2025</CardDescription>
+      <CardHeader className="pb-2">
+        <div className="flex items-start justify-between">
+          <div>
+            <CardTitle className="text-xl flex items-center gap-2">
+              <IconCalendarWeek className="h-5 w-5 text-primary" />
+              Meu cronograma
+            </CardTitle>
+            <CardDescription className="mt-1.5">Junho 2025</CardDescription>
+          </div>
+          <Button variant="outline" size="sm" className="h-8 gap-2">
+            <PencilIcon className="h-3.5 w-3.5" />
+            <span>Editar</span>
+          </Button>
         </div>
-        <Button variant="outline" size="sm" className="h-8 gap-2">
-          <PencilIcon className="h-3.5 w-3.5" />
-          <span>Editar</span>
-        </Button>
       </CardHeader>
       <CardContent>
         <div className="flex justify-between items-center mb-4">

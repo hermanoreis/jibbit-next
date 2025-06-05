@@ -7,13 +7,15 @@ export function WeeklyEssay() {
   return (
     <Card className="col-span-1">
       <CardHeader className="pb-2">
-        <CardTitle className="text-xl flex items-center gap-2">
-          <FileTextIcon className="h-5 w-5 text-primary" />
-          Redação da Semana
-        </CardTitle>
-        <CardDescription>
-          Escreva redações e receba sua avaliação em tempo real baseado nos mesmos critérios da banca do ENEM.
-        </CardDescription>
+        <div>
+          <CardTitle className="text-xl flex items-center gap-2">
+            <FileTextIcon className="h-5 w-5 text-primary" />
+            Redação da Semana
+          </CardTitle>
+          <CardDescription>
+            Escreva redações e receba sua avaliação em tempo real baseado nos mesmos critérios da banca do ENEM.
+          </CardDescription>
+        </div>
       </CardHeader>
       <CardContent>
         <div className="rounded-lg border p-4 mt-2">
