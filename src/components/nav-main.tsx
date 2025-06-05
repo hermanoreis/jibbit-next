@@ -1,6 +1,6 @@
 "use client"
 
-import { type Icon } from "@tabler/icons-react"
+import type React from "react"
 
 import {
   SidebarGroup,
@@ -16,7 +16,7 @@ export function NavMain({
   items: {
     title: string
     url: string
-    icon?: Icon
+    icon?: React.ElementType
   }[]
 }) {
   return (
@@ -29,7 +29,7 @@ export function NavMain({
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton tooltip={item.title}>
-                {item.icon && <item.icon />}
+                {item.icon && <item.icon className="size-4" />}
                 <span>{item.title}</span>
               </SidebarMenuButton>
             </SidebarMenuItem>

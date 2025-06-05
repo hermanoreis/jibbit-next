@@ -1,6 +1,6 @@
 import { LogoIcon } from "@/components/icons/logo-icon"
-
 import { SignupForm } from "@/components/signup-form"
+import Image from "next/image"
 
 export default function SignupPage() {
   return (
@@ -19,9 +19,10 @@ export default function SignupPage() {
         </div>
       </div>
       <div className="bg-muted relative hidden lg:block">
-        <img
+        <Image
           src="/placeholder.svg"
           alt="Imagem"
+          fill={true}
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />
       </div>

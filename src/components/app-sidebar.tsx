@@ -12,9 +12,6 @@ import {
   IconHelp,
   IconHome,
   IconReport,
-  IconSearch,
-  IconSettings,
-  IconSchool,
   IconMessageChatbot,
 } from "@tabler/icons-react"
 import { ListChecksIcon } from "lucide-react"
