@@ -37,15 +37,15 @@ export function MySchedule() {
   const [currentDay, setCurrentDay] = useState(9)
 
   return (
-    <Card className="col-span-1">
-      <CardHeader className="pb-2">
-        <div className="flex items-start justify-between">
-          <div>
-            <CardTitle className="text-xl flex items-center gap-2">
+    <Card className="col-span-1 min-w-0 max-w-full">
+      <CardHeader className="pb-2 min-w-0 max-w-full">
+        <div className="flex items-start justify-between min-w-0 max-w-full">
+          <div className="min-w-0 max-w-full">
+            <CardTitle className="text-xl flex items-center gap-2 min-w-0 max-w-full">
               <IconCalendarWeek className="h-5 w-5 text-primary" />
               Meu cronograma
             </CardTitle>
-            <CardDescription className="mt-1.5">Junho 2025</CardDescription>
+            <CardDescription className="mt-1.5 min-w-0 max-w-full">Junho 2025</CardDescription>
           </div>
           <Button variant="outline" size="sm" className="h-8 gap-2">
             <PencilIcon className="h-3.5 w-3.5" />
@@ -53,18 +53,18 @@ export function MySchedule() {
           </Button>
         </div>
       </CardHeader>
-      <CardContent>
-        <div className="flex justify-between items-center mb-4">
-          <Button variant="ghost" size="icon" className="h-8 w-8">
+      <CardContent className="min-w-0 max-w-full">
+        <div className="flex justify-between items-center mb-4 min-w-0 max-w-full overflow-x-auto">
+          <Button variant="ghost" size="icon" className="h-8 w-8" >
             <ChevronLeftIcon className="h-4 w-4" />
             <span className="sr-only">Anterior</span>
           </Button>
-          <div className="flex space-x-1">
+          <div className="flex space-x-1 min-w-0 max-w-full">
             {weekdays.map((day, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <span className="text-xs text-muted-foreground mb-1">{day}</span>
+              <div key={i} className="flex flex-col items-center min-w-0 max-w-full">
+                <span className="text-xs text-muted-foreground mb-1 min-w-0 max-w-full">{day}</span>
                 <button
-                  className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-medium ${
+                  className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-medium min-w-0 max-w-full ${
                     days[i] === currentDay ? "bg-primary text-primary-foreground" : "hover:bg-muted"
                   }`}
                   onClick={() => setCurrentDay(days[i])}
