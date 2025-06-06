@@ -17,6 +17,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { LogoIcon } from "@/components/icons/logo-icon"
 
 const pageTitles: Record<string, string> = {
   "practice-tests": "Simulados",
@@ -40,13 +41,21 @@ export function SiteHeader() {
   })
 
   return (
-    <header className="flex h-(--header-height) shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height)">
+    <header className="mx-2 mt-2 mb-0 flex h-(--header-height) shrink-0 items-center gap-2 rounded-xl border bg-card shadow-sm transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height)">
       <div className="flex w-full items-center gap-1 px-4 lg:gap-2 lg:px-6">
         <div className="flex items-center md:hidden group-[[data-desktop-sidebar-state=collapsed]]/sidebar-wrapper:md:flex">
-          <SidebarTrigger className="-ml-1" />
+          <Link href="/" className="flex items-center gap-2 mr-2">
+            <LogoIcon className="h-6 w-auto" />
+            <span className="font-black font-redhat">Jibbit</span>
+          </Link>
           <Separator
             orientation="vertical"
-            className="mx-2 data-[orientation=vertical]:h-4"
+            className="data-[orientation=vertical]:h-4"
+          />
+          <SidebarTrigger className="mx-2" />
+          <Separator
+            orientation="vertical"
+            className="data-[orientation=vertical]:h-4"
           />
         </div>
         <Breadcrumb>

@@ -13,6 +13,7 @@ import data from "./data.json"
 export default function Page() {
   return (
     <SidebarProvider
+      className="bg-sidebar"
       style={
         {
           "--sidebar-width": "calc(var(--spacing) * 60)",
@@ -21,9 +22,12 @@ export default function Page() {
       }
     >
       <AppSidebar variant="inset" />
-      <SidebarInset>
+      <SidebarInset className="bg-transparent m-0 !shadow-none md:m-0 md:!shadow-none lg:!shadow-none !rounded-none">
+        {/* Header card */}
         <SiteHeader />
-        <div className="flex flex-1 flex-col">
+
+        {/* Page content card */}
+        <div className="m-2 flex flex-1 flex-col rounded-xl border bg-card shadow-sm">
           <div className="@container/main flex flex-1 flex-col gap-2">
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
               <SectionCards />

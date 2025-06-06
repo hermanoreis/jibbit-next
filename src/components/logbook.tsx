@@ -32,8 +32,8 @@ export function Logbook() {
           <CardDescription>Anotações sobre seu progresso nos estudos</CardDescription>
         </div>
       </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
+      <CardContent className="flex-1 flex flex-col">
+        <div className="flex-1 space-y-4 overflow-y-auto">
           {entries.map((entry, i) => (
             <div key={i} className="flex gap-3">
               <div className="flex flex-col items-center">
@@ -48,11 +48,12 @@ export function Logbook() {
             </div>
           ))}
         </div>
-
-        <Button className="w-full mt-4 bg-primary hover:bg-primary/90">
-          <PlusIcon className="h-4 w-4 mr-2" />
-          Nova anotação
-        </Button>
+        <div className="mt-6 border-t pt-4">
+          <Button variant="outline" className="w-full">
+            <PlusIcon className="h-4 w-4 mr-2" />
+            Nova anotação
+          </Button>
+        </div>
       </CardContent>
     </Card>
   )

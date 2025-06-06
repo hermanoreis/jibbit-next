@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { BarChart4Icon, TrendingUpIcon } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 
 export function GeneralPerformance() {
   return (
@@ -12,8 +13,8 @@ export function GeneralPerformance() {
         </CardTitle>
         <CardDescription>Seu desempenho nas últimas avaliações por área de conhecimento</CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
+      <CardContent className="flex-1 flex flex-col">
+        <div className="flex-1 space-y-4 overflow-y-auto">
           <div className="space-y-2">
             <div className="flex justify-between items-center">
               <span className="text-sm font-medium">Linguagens</span>
@@ -64,11 +65,12 @@ export function GeneralPerformance() {
             </div>
           </div>
         </div>
-
-        <div className="flex justify-center mt-6">
-          <Button className="bg-primary hover:bg-primary/90">
-            <TrendingUpIcon className="h-4 w-4 mr-2" />
-            Ver relatório detalhado
+        <div className="mt-6 border-t pt-4">
+          <Button variant="outline" className="w-full" asChild>
+            <Link href="/relatorio">
+              <TrendingUpIcon className="h-4 w-4 mr-2" />
+              Ver relatório detalhado
+            </Link>
           </Button>
         </div>
       </CardContent>

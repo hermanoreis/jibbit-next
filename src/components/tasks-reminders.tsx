@@ -111,7 +111,7 @@ export function TasksAndReminders() {
           </Dialog>
         </div>
       </CardHeader>
-      <CardContent className="flex-1 flex flex-col overflow-hidden">
+      <CardContent className="flex-1 flex flex-col">
         <div className="flex-1 overflow-y-auto">
           {pendingTasks.length === 0 && completedTasks.length === 0 && (
             <p className="text-sm text-muted-foreground text-center py-4">Nenhuma tarefa ou lembrete ainda.</p>
