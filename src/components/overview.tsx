@@ -16,7 +16,7 @@ export function Overview() {
             Lembre-se: a jornada do conhecimento é longa, mas cada passo vale a pena!
           </p>
         </div>
-        <div className="flex items-center min-w-0 w-full">
+        <div className="flex items-center min-w-0 w-full lg:w-auto lg:pl-8">
           <Card className="flex-row items-center gap-4 p-4 w-full max-w-full lg:w-[380px]">
             <CheckCircleIcon className="w-6 h-6 text-primary" />
             <div className="flex-1 space-y-1 min-w-0">
