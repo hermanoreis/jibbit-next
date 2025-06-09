@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
 import { ThemeSwitcher } from "@/components/theme-switcher"
+import { useWhitelabel } from "@/providers/whitelabel-provider"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -27,6 +28,7 @@ const pageTitles: Record<string, string> = {
 export function SiteHeader() {
   const pathname = usePathname()
   const segments = pathname.split("/").filter(Boolean)
+  const { info } = useWhitelabel()
   
   const breadcrumbs = segments.map((segment, index) => {
     const href = `/${segments.slice(0, index + 1).join("/")}`
@@ -46,7 +48,7 @@ export function SiteHeader() {
         <div className="flex items-center md:hidden group-[[data-desktop-sidebar-state=collapsed]]/sidebar-wrapper:md:flex">
           <Link href="/" className="flex items-center gap-2 mr-2">
             <LogoIcon className="h-6 w-auto" />
-            <span className="font-black font-redhat">Jibbit</span>
+            <span className="font-black font-redhat">{info.name}</span>
           </Link>
           <Separator
             orientation="vertical"
@@ -85,7 +87,7 @@ export function SiteHeader() {
             ))}
           </BreadcrumbList>
         </Breadcrumb>
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto flex items-center">
           <Button variant="ghost" asChild size="sm" className="flex">
             <a
               href="#"

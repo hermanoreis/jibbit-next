@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/providers";
+import { MetadataUpdater } from "@/components/metadata-updater";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +21,7 @@ const redHatDisplay = Red_Hat_Display({
   weight: ["400", "500", "700", "900"],
 });
 
+// Default metadata for server-side rendering
 export const metadata: Metadata = {
   title: "Jibbit | Seu companheiro de estudo",
   description: "Jibbit é um assistente de estudo que ajuda você a estudar melhor.",
@@ -65,7 +67,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${redHatDisplay.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <MetadataUpdater />
+          {children}
+        </Providers>
       </body>
     </html>
   );

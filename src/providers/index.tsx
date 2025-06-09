@@ -2,6 +2,7 @@
 
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { ThemeProvider } from "@/providers/theme-provider"
+import { WhitelabelProvider } from "@/providers/whitelabel-provider"
 
 interface ProvidersProps {
   children: React.ReactNode
@@ -16,7 +17,9 @@ export function Providers({ children }: ProvidersProps) {
       disableTransitionOnChange
     >
       <ThemeProvider defaultTheme="jibbit" storageKey="ui-theme">
-        {children}
+        <WhitelabelProvider>
+          {children}
+        </WhitelabelProvider>
       </ThemeProvider>
     </NextThemesProvider>
   )

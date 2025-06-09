@@ -16,6 +16,7 @@ import {
   IconMessageChatbot,
 } from "@tabler/icons-react"
 import { ListChecksIcon } from "lucide-react"
+import { useWhitelabel } from "@/providers/whitelabel-provider"
 
 import { LogoIcon } from "@/components/icons/logo-icon"
 import { NavTools } from "@/components/nav-tools"
@@ -141,6 +142,8 @@ const data = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { info } = useWhitelabel()
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader className="py-4">
@@ -152,7 +155,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <Link href="/">
                 <LogoIcon className="h-[96px] w-auto !min-h-[96px]" />
-                <span className="text-xl font-black font-redhat">Jibbit</span>
+                <span className="text-xl font-black font-redhat">{info.name}</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

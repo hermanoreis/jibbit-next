@@ -68,6 +68,12 @@ export function ThemeSwitcher() {
         >
           Vintage Paper
         </DropdownMenuItem>
+        <DropdownMenuItem 
+          onClick={() => setTheme("preparasp")}
+          className={theme === "preparasp" ? "bg-accent text-accent-foreground" : ""}
+        >
+          Prepara SP
+        </DropdownMenuItem>
         
         <DropdownMenuSeparator />
         
