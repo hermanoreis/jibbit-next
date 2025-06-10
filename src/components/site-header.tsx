@@ -19,6 +19,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { LogoIcon } from "@/components/icons/logo-icon"
+import { IconMessageChatbot } from "@tabler/icons-react"
 
 const pageTitles: Record<string, string> = {
   "practice-tests": "Simulados",
@@ -100,6 +101,17 @@ export function SiteHeader() {
             </a>
           </Button>
           <ThemeSwitcher />
+          <Button variant="ghost" asChild size="icon" className="flex">
+            <a
+              href="#"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="dark:text-foreground"
+            >
+              <IconMessageChatbot className="h-[1.2rem] w-[1.2rem]" />
+              <span className="sr-only">Tutor Jibbit</span>
+            </a>
+          </Button>
         </div>
       </div>
     </header>
