@@ -4,6 +4,8 @@ import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/providers";
 import { MetadataUpdater } from "@/components/metadata-updater";
+import { PWAInstallPrompt } from "@/components/pwa-install-prompt";
+import { PWARegister } from "@/components/pwa-register";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +27,31 @@ const redHatDisplay = Red_Hat_Display({
 export const metadata: Metadata = {
   title: "Jibbit | Seu companheiro de estudo",
   description: "Jibbit é um assistente de estudo que ajuda você a estudar melhor.",
+  manifest: "/manifest.json",
+  themeColor: "#0f172a",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Jibbit",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  icons: {
+    icon: [
+      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -69,7 +96,9 @@ export default function RootLayout({
       >
         <Providers>
           <MetadataUpdater />
+          <PWARegister />
           {children}
+          <PWAInstallPrompt />
         </Providers>
       </body>
     </html>
