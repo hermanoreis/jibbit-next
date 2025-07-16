@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  swcMinify: false,
+  experimental: {
+    optimizePackageImports: ["@tabler/icons-react", "lucide-react"],
+  },
 };
 
 export default nextConfig;

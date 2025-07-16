@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Hydration</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Teste de JavaScript</h1>
+    <div id="test-result">JavaScript não carregou...</div>
+    
+    <script>
+        console.log('JavaScript está funcionando!');
+        document.getElementById('test-result').innerHTML = '<span class="success">✅ JavaScript funcionando corretamente!</span>';
+        document.getElementById('test-result').onclick = function() {
+            alert('Interação funcionando!');
+        };
+    </script>
+</body>
+</html> 

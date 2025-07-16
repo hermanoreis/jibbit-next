@@ -68,7 +68,7 @@ const data = {
     },
     {
       title: "Tutor Jibbit",
-      url: "#",
+      url: "/chat",
       icon: IconMessageChatbot,
     },
   ],
