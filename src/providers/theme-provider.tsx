@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react"
 
-type Theme = "jibbit" | "neobrutalism" | "bubblegum" | "vintagepaper" | "preparasp"
+type Theme = "geniex" | "neobrutalism" | "bubblegum" | "vintagepaper" | "preparasp"
 type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
@@ -15,7 +15,7 @@ type ThemeProviderState = {
 }
 
 const initialState: ThemeProviderState = {
-  theme: "jibbit",
+  theme: "geniex",
   setTheme: () => null,
 }
 
@@ -23,7 +23,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 
 export function ThemeProvider({
   children,
-  defaultTheme = "jibbit",
+  defaultTheme = "geniex",
   storageKey = "ui-theme",
   ...props
 }: ThemeProviderProps) {
@@ -44,7 +44,7 @@ export function ThemeProvider({
     if (!mounted) return
 
     // Remove any existing theme classes and add the current one
-    document.documentElement.classList.remove("theme-jibbit", "theme-neobrutalism", "theme-bubblegum", "theme-vintagepaper", "theme-preparasp")
+    document.documentElement.classList.remove("theme-geniex", "theme-neobrutalism", "theme-bubblegum", "theme-vintagepaper", "theme-preparasp")
     document.documentElement.classList.add(`theme-${theme}`)
 
     // Save the theme preference to localStorage

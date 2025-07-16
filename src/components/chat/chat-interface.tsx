@@ -20,7 +20,7 @@ export function ChatInterface() {
     {
       id: "1",
       content:
-        "Olá! Eu sou o Jibbit, seu assistente de estudos. Como posso ajudá-lo hoje?",
+        "Olá! Eu sou o GenieX, seu assistente de estudos. Como posso ajudá-lo hoje?",
       role: "assistant",
       timestamp: new Date(),
     },
@@ -85,13 +85,13 @@ export function ChatInterface() {
       <div className="border-b px-6 py-4">
         <div className="flex items-center gap-3">
           <Avatar className="h-8 w-8">
-            <AvatarImage src="/avatars/jibbit.png" alt="Jibbit" />
+            <AvatarImage src="/avatars/geniex.png" alt="GenieX" />
             <AvatarFallback className="bg-primary text-primary-foreground">
               <IconRobot className="h-4 w-4" />
             </AvatarFallback>
           </Avatar>
           <div>
-            <h1 className="font-semibold text-lg">Tutor Jibbit</h1>
+                            <h1 className="font-semibold text-lg">Tutor GenieX</h1>
             <p className="text-sm text-muted-foreground">
               Seu assistente de estudos
             </p>
@@ -112,7 +112,7 @@ export function ChatInterface() {
             >
               {message.role === "assistant" && (
                 <Avatar className="h-8 w-8 shrink-0">
-                  <AvatarImage src="/avatars/jibbit.png" alt="Jibbit" />
+                  <AvatarImage src="/avatars/geniex.png" alt="GenieX" />
                   <AvatarFallback className="bg-primary text-primary-foreground">
                     <IconRobot className="h-4 w-4" />
                   </AvatarFallback>
@@ -157,7 +157,7 @@ export function ChatInterface() {
           {isLoading && (
             <div className="flex gap-3 justify-start">
               <Avatar className="h-8 w-8 shrink-0">
-                <AvatarImage src="/avatars/jibbit.png" alt="Jibbit" />
+                <AvatarImage src="/avatars/geniex.png" alt="GenieX" />
                 <AvatarFallback className="bg-primary text-primary-foreground">
                   <IconRobot className="h-4 w-4" />
                 </AvatarFallback>

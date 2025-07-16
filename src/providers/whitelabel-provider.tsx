@@ -9,8 +9,8 @@ type WhitelabelInfo = {
 }
 
 const whitelabelConfig: Record<string, WhitelabelInfo> = {
-  jibbit: {
-    name: "Jibbit",
+  geniex: {
+    name: "GenieX",
     description: "Seu companheiro de estudo",
   },
   preparasp: {
@@ -24,7 +24,7 @@ type WhitelabelProviderState = {
 }
 
 const initialState: WhitelabelProviderState = {
-  info: whitelabelConfig.jibbit,
+      info: whitelabelConfig.geniex,
 }
 
 const WhitelabelProviderContext = createContext<WhitelabelProviderState>(initialState)
@@ -38,7 +38,7 @@ export function WhitelabelProvider({
   const [info, setInfo] = useState<WhitelabelInfo>(whitelabelConfig[theme])
 
   useEffect(() => {
-    setInfo(whitelabelConfig[theme] || whitelabelConfig.jibbit)
+    setInfo(whitelabelConfig[theme] || whitelabelConfig.geniex)
   }, [theme])
 
   return (

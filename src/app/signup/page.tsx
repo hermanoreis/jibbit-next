@@ -9,7 +9,7 @@ export default function SignupPage() {
         <div className="flex justify-center gap-2 md:justify-start">
           <a href="#" className="flex items-center gap-2 font-medium">
             <LogoIcon className="h-10 w-auto" />
-            <span className="text-xl font-black font-redhat">Jibbit</span>
+            <span className="text-xl font-black font-redhat">GenieX</span>
           </a>
         </div>
         <div className="flex flex-1 items-center justify-center">

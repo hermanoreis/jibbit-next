@@ -109,7 +109,7 @@ export function SiteHeader() {
               className="dark:text-foreground"
             >
               <IconMessageChatbot className="h-[1.2rem] w-[1.2rem]" />
-              <span className="sr-only">Tutor Jibbit</span>
+              <span className="sr-only">Tutor GenieX</span>
             </a>
           </Button>
         </div>

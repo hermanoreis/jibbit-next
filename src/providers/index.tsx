@@ -15,9 +15,9 @@ export function Providers({ children }: ProvidersProps) {
       defaultTheme="system" 
       enableSystem
       disableTransitionOnChange
-      storageKey="jibbit-theme"
+                storageKey="geniex-theme"
     >
-      <ThemeProvider defaultTheme="jibbit" storageKey="ui-theme">
+              <ThemeProvider defaultTheme="geniex" storageKey="ui-theme">
         <WhitelabelProvider>
           {children}
         </WhitelabelProvider>

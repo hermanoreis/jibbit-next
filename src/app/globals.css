@@ -69,8 +69,8 @@
   --color-destructive-foreground: var(--destructive-foreground);
 }
 
-/* Default Jibbit Theme */
-:root, .theme-jibbit {
+/* Default GenieX Theme */
+:root, .theme-geniex {
   --radius: 0.5rem;
   --background: oklch(0.99 0 0);
   --foreground: oklch(0.20 0 0);
@@ -126,7 +126,7 @@
   --tracking-normal: 0.025em;
 }
 
-.dark, .dark.theme-jibbit {
+.dark, .dark.theme-geniex {
   --background: oklch(0.18 0 0);
   --foreground: oklch(0.93 0.01 255.51);
   --card: oklch(0.20 0 0);

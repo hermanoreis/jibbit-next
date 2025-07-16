@@ -60,9 +60,9 @@ export function PWAInstallPrompt() {
     <div className="fixed bottom-4 left-4 right-4 z-50 bg-background border rounded-lg shadow-lg p-4 max-w-sm mx-auto">
       <div className="flex items-start justify-between">
         <div className="flex-1">
-          <h3 className="font-semibold text-sm">Install Jibbit</h3>
+                      <h3 className="font-semibold text-sm">Instalar GenieX</h3>
           <p className="text-xs text-muted-foreground mt-1">
-            Install our app for a better experience
+            Instale nosso app para uma melhor experiência
           </p>
         </div>
         <Button
@@ -80,7 +80,7 @@ export function PWAInstallPrompt() {
           onClick={handleInstallClick}
           className="flex-1"
         >
-          Install
+          Instalar
         </Button>
         <Button
           variant="outline"
@@ -88,7 +88,7 @@ export function PWAInstallPrompt() {
           onClick={handleDismiss}
           className="flex-1"
         >
-          Not now
+          Agora não
         </Button>
       </div>
     </div>

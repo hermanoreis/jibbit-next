@@ -25,8 +25,8 @@ const redHatDisplay = Red_Hat_Display({
 
 // Default metadata for server-side rendering
 export const metadata: Metadata = {
-  title: "Jibbit | Seu companheiro de estudo",
-  description: "Jibbit é um assistente de estudo que ajuda você a estudar melhor.",
+  title: "GenieX | Seu companheiro de estudo",
+  description: "GenieX é um assistente de estudo que ajuda você a estudar melhor.",
   manifest: "/manifest.json",
   themeColor: "#0f172a",
   viewport: {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Jibbit",
+    title: "GenieX",
   },
   formatDetection: {
     telephone: false,
@@ -75,7 +75,7 @@ export default function RootLayout({
                   if (uiTheme) {
                     document.documentElement.classList.add('theme-' + uiTheme);
                   } else {
-                    document.documentElement.classList.add('theme-jibbit');
+                    document.documentElement.classList.add('theme-geniex');
                   }
                   
                   // Set the color mode

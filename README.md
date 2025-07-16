@@ -1,8 +1,8 @@
-# Jibbit
+# GenieX
 
-Jibbit is a foundation software architecture for Jovens Gênios products. Built on [Next.js](https://nextjs.org), it combines shadcn UI components with tweakcn styling to create highly adaptable platforms that can be customized for different clients and products.
+GenieX is a foundation software architecture for Jovens Gênios products. Built on [Next.js](https://nextjs.org), it combines shadcn UI components with tweakcn styling to create highly adaptable platforms that can be customized for different clients and products.
 
-**Live Demo**: [https://jibbit-next.vercel.app/](https://jibbit-next.vercel.app/)
+**Live Demo**: [https://geniex-next.vercel.app/](https://geniex-next.vercel.app/)
 
 ## Key Features
 

@@ -1,5 +1,5 @@
-// Service Worker for Jibbit PWA
-const CACHE_NAME = 'jibbit-v1';
+// Service Worker for GenieX PWA
+const CACHE_NAME = 'geniex-v1';
 const urlsToCache = [
   '/',
   '/dashboard',

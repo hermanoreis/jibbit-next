@@ -67,7 +67,7 @@ const data = {
       icon: IconChartDots3,
     },
     {
-      title: "Tutor Jibbit",
+              title: "Tutor GenieX",
       url: "/chat",
       icon: IconMessageChatbot,
     },

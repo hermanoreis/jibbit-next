@@ -28,7 +28,7 @@ export function ChatInterface() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      content: "Olá! Sou o Jibbit, seu assistente de estudos. Como posso te ajudar hoje?",
+      content: "Olá! Sou o GenieX, seu assistente de estudos. Como posso te ajudar hoje?",
       isUser: false,
       timestamp: new Date(),
     }
@@ -104,7 +104,7 @@ export function ChatInterface() {
     setMessages([
       {
         id: "1",
-        content: "Olá! Sou o Jibbit, seu assistente de estudos. Como posso te ajudar hoje?",
+        content: "Olá! Sou o GenieX, seu assistente de estudos. Como posso te ajudar hoje?",
         isUser: false,
         timestamp: new Date(),
       }
@@ -123,13 +123,13 @@ export function ChatInterface() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Avatar className="h-8 w-8">
-                <AvatarImage src="/avatars/jibbit-bot.png" />
+                <AvatarImage src="/avatars/geniex-bot.png" />
                 <AvatarFallback className="bg-primary text-primary-foreground">
                   <IconRobot className="h-4 w-4" />
                 </AvatarFallback>
               </Avatar>
               <div>
-                <h2 className="font-semibold">Tutor Jibbit</h2>
+                <h2 className="font-semibold">Tutor GenieX</h2>
                 <p className="text-sm text-muted-foreground">Assistente de estudos</p>
               </div>
             </div>
@@ -169,7 +169,7 @@ export function ChatInterface() {
               >
                 {!message.isUser && (
                   <Avatar className="h-8 w-8 mt-1">
-                    <AvatarImage src="/avatars/jibbit-bot.png" />
+                    <AvatarImage src="/avatars/geniex-bot.png" />
                     <AvatarFallback className="bg-primary text-primary-foreground">
                       <IconRobot className="h-4 w-4" />
                     </AvatarFallback>
@@ -219,7 +219,7 @@ export function ChatInterface() {
               </Button>
             </div>
             <p className="text-xs text-muted-foreground mt-2 text-center">
-              O Jibbit pode cometer erros. Considere verificar informações importantes.
+              O GenieX pode cometer erros. Considere verificar informações importantes.
             </p>
           </div>
         </div>

@@ -45,10 +45,10 @@ export function ThemeSwitcher() {
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>UI Theme</DropdownMenuLabel>
         <DropdownMenuItem 
-          onClick={() => setTheme("jibbit")}
-          className={theme === "jibbit" ? "bg-accent text-accent-foreground" : ""}
+          onClick={() => setTheme("geniex")}
+          className={theme === "geniex" ? "bg-accent text-accent-foreground" : ""}
         >
-          Jibbit
+          GenieX
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => setTheme("neobrutalism")}
