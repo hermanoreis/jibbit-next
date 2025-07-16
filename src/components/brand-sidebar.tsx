@@ -47,11 +47,7 @@ interface SidebarProps {
   className?: string;
 }
 
-export function BrandSidebar({
-  collapsed = false,
-  onToggle,
-  className,
-}: SidebarProps) {
+export function BrandSidebar({}: SidebarProps) {
   const pathname = usePathname();
   const { state } = useSidebar();
   const isCollapsed = state === "collapsed";

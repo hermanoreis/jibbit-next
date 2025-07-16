@@ -40,7 +40,7 @@ function LoginForm() {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit() {
     setIsLoading(true);
   }
 

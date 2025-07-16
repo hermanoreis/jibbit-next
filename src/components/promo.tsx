@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -8,13 +7,11 @@ export function Promo({
   description,
   buttonText,
   buttonLink,
-  backgroundImage,
 }: {
   title: string;
   description: string;
   buttonText: string;
   buttonLink: string;
-  backgroundImage: string;
 }) {
   return (
     <div className="relative h-[300px] w-full bg-foreground/10">

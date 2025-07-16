@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
@@ -9,13 +8,11 @@ export function Hero({
   description,
   buttonText,
   buttonLink,
-  backgroundImage,
 }: {
   title: string;
   description: string;
   buttonText: string;
   buttonLink: string;
-  backgroundImage: string;
 }) {
   return (
     <div className="relative h-[600px] w-full bg-foreground/10">
