@@ -3,7 +3,6 @@
 import { LogoIcon } from "@/components/icons/logo-icon"
 import { LoginForm } from "@/components/login-form"
 import { useWhitelabel } from "@/providers/whitelabel-provider"
-import Image from "next/image"
 
 export default function LoginPage() {
   const { info } = useWhitelabel()

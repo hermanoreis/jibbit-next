@@ -1,6 +1,5 @@
 import { LogoIcon } from "@/components/icons/logo-icon"
 import { SignupForm } from "@/components/signup-form"
-import Image from "next/image"
 
 export default function SignupPage() {
   return (
