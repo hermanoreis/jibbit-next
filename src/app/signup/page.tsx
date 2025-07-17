@@ -18,12 +18,15 @@ export default function SignupPage() {
           </div>
         </div>
       </div>
-      <div className="bg-muted relative hidden lg:block">
-        <Image
-          src="/placeholder.svg"
-          alt="Imagem"
-          fill={true}
-          className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+      <div className="bg-muted relative hidden lg:block overflow-hidden">
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: 'url(/signup-image.png)',
+            backgroundRepeat: 'repeat',
+            backgroundSize: 'auto',
+            filter: 'brightness(0.8) grayscale(0.2)'
+          }}
         />
       </div>
     </div>
